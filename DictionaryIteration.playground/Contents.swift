@@ -18,7 +18,7 @@
  */
 // write your code here
 
-
+var albums = ["Nirvana": "Nevermind","Blonde": "Parallel Lines", "The Kinks": "Low Budget", "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"]
 
 
 
@@ -31,7 +31,7 @@
 // write your code here
 
 
-
+albums["Pixie"] = "Doolittle"
 
 
 
@@ -42,7 +42,7 @@
  */
 // write your code here
 
-
+albums["The Kinks"] = nil
 
 
 
@@ -56,7 +56,12 @@
 let bandName = "Nirvana"
 // write your code here
 
+for (band, album) in albums {
 
+    if band == bandName{
+        print("\(band)'s top-selling album was \(album)")
+    }
+}
 
 
 
@@ -69,6 +74,11 @@ let bandName = "Nirvana"
 // write your code here
 
 
+for (band, album) in albums {
+
+        print("\(band)'s top-selling album was \(album)")
+  
+}
 
 
 
