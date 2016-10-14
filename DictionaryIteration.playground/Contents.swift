@@ -18,7 +18,7 @@
  */
 // write your code here
 
-
+var bandAndBestAlbum = ["Nirvana": "Nevermind", "Blondie": "Parallel Lines", "The Kinks": "Low Budget", "The Beatles": "Sgt. Pepper's Lonely Heats Club Band"]
 
 
 
@@ -30,7 +30,7 @@
  */
 // write your code here
 
-
+bandAndBestAlbum["Pixie"] = "Doolittle"
 
 
 
@@ -43,7 +43,7 @@
 // write your code here
 
 
-
+bandAndBestAlbum["The Kinks"] = nil
 
 
 
@@ -55,7 +55,11 @@
  */
 let bandName = "Nirvana"
 // write your code here
+var nirvanaBestAlbum = bandAndBestAlbum[bandName]
 
+if let bestAlbum = nirvanaBestAlbum {
+    print("\(bandName)'s top-selling album was \(bestAlbum)")
+}
 
 
 
@@ -69,7 +73,9 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+for (band, album) in bandAndBestAlbum {
+    print("\(band)'s top-selling album was \(album)")
+}
 
 
 
@@ -79,7 +85,7 @@ let bandName = "Nirvana"
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
 
-
+// [String: String]
 
 
 
@@ -106,7 +112,7 @@ let bandName = "Nirvana"
  * Grade 12: B
  */
 // write your code here
-
+let examResults = [9: "B", 10: "A", 11: "C", 12: "B"]
 
 
 
@@ -119,7 +125,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (gradeNumber, grade) in examResults {
+    print("Grade \(gradeNumber) got \(grade)")
+}
 
 
 
@@ -132,7 +140,11 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+for (gradeNumber, grade) in examResults {
+    if grade == "A" {
+        print("Grade \(gradeNumber) got the higest score with \(grade)")
+    }
+}
 
 
 
