@@ -17,6 +17,12 @@
  * The Beatles: _Sgt. Pepper's Lonely Hearts Club Band_
  */
 // write your code here
+var highestSellingBandAlbum = [
+    "Nirvana" : "Nevermind",
+    "Blondie" : "Parallel Lines",
+    "The Kinks" : "Low Budget",
+    "The Beatles" : "Sgt. Pepper's Lonely Hearts Club Band"
+]
 
 
 
@@ -30,6 +36,7 @@
  */
 // write your code here
 
+highestSellingBandAlbum["Pixie"] = "Doolitte"
 
 
 
@@ -41,6 +48,7 @@
  ### 3. We don't care that much about The Kinks. Delete them from the dictionary you created in Question 1.
  */
 // write your code here
+highestSellingBandAlbum["The Kinks"] = nil
 
 
 
@@ -55,6 +63,9 @@
  */
 let bandName = "Nirvana"
 // write your code here
+if let album = highestSellingBandAlbum[bandName] {
+    print("\(bandName)'s top-selling album was \(album)")
+}
 
 
 
@@ -67,6 +78,9 @@ let bandName = "Nirvana"
  ### 5. Iterate over the dictionary you created in Question 1 and print "<Band>'s top-selling album was <Album>" for each item in the dictionary.
  */
 // write your code here
+for (band, album) in highestSellingBandAlbum {
+    print("\(band)'s top-selling album was \(album)")
+}
 
 
 
@@ -78,7 +92,7 @@ let bandName = "Nirvana"
 /*: question6
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
-
+// (String, String)
 
 
 
@@ -89,7 +103,7 @@ let bandName = "Nirvana"
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
-
+// [Int : String]
 
 
 
@@ -106,6 +120,12 @@ let bandName = "Nirvana"
  * Grade 12: B
  */
 // write your code here
+let examScores = [
+    9: "B",
+    10: "A",
+    11: "C",
+    12: "B"
+]
 
 
 
@@ -118,7 +138,9 @@ let bandName = "Nirvana"
  ### 9. Print the message "Grade <Grade> got <Score>" for each grade in the dictionary you created in Question 8.
  */
 // write your code here
-
+for (grade, score) in examScores {
+    print("Grade \(grade) got \(score)")
+}
 
 
 
@@ -131,7 +153,17 @@ let bandName = "Nirvana"
  */
 // write your code here
 
+var smallestLetter = "Z"
+var bestGrade = 0
 
+for (grade, score) in examScores {
+    if score < smallestLetter {
+        smallestLetter = score
+        bestGrade = grade
+    }
+}
+
+print("Grade \(bestGrade) got the highest score with \(smallestLetter)!")
 
 
 
