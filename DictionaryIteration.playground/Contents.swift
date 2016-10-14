@@ -103,7 +103,7 @@ for (band, album) in highestSellingBandAlbum {
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
-
+// [Int : String]
 
 
 
@@ -120,6 +120,12 @@ for (band, album) in highestSellingBandAlbum {
  * Grade 12: B
  */
 // write your code here
+let examScores = [
+    9: "B",
+    10: "A",
+    11: "C",
+    12: "B"
+]
 
 
 
@@ -132,7 +138,9 @@ for (band, album) in highestSellingBandAlbum {
  ### 9. Print the message "Grade <Grade> got <Score>" for each grade in the dictionary you created in Question 8.
  */
 // write your code here
-
+for (grade, score) in examScores {
+    print("Grade \(grade) got \(score)")
+}
 
 
 
@@ -145,7 +153,17 @@ for (band, album) in highestSellingBandAlbum {
  */
 // write your code here
 
+var smallestLetter = "Z"
+var bestGrade = 0
 
+for (grade, score) in examScores {
+    if score < smallestLetter {
+        smallestLetter = score
+        bestGrade = grade
+    }
+}
+
+print("Grade \(bestGrade) got the highest score with \(smallestLetter)!")
 
 
 
