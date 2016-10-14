@@ -17,6 +17,12 @@
  * The Beatles: _Sgt. Pepper's Lonely Hearts Club Band_
  */
 // write your code here
+var highestSellingBandAlbum = [
+    "Nirvana" : "Nevermind",
+    "Blondie" : "Parallel Lines",
+    "The Kinks" : "Low Budget",
+    "The Beatles" : "Sgt. Pepper's Lonely Hearts Club Band"
+]
 
 
 
@@ -30,6 +36,7 @@
  */
 // write your code here
 
+highestSellingBandAlbum["Pixie"] = "Doolitte"
 
 
 
@@ -41,6 +48,7 @@
  ### 3. We don't care that much about The Kinks. Delete them from the dictionary you created in Question 1.
  */
 // write your code here
+highestSellingBandAlbum["The Kinks"] = nil
 
 
 
@@ -55,6 +63,9 @@
  */
 let bandName = "Nirvana"
 // write your code here
+if let album = highestSellingBandAlbum[bandName] {
+    print("\(bandName)'s top-selling album was \(album)")
+}
 
 
 
@@ -67,6 +78,9 @@ let bandName = "Nirvana"
  ### 5. Iterate over the dictionary you created in Question 1 and print "<Band>'s top-selling album was <Album>" for each item in the dictionary.
  */
 // write your code here
+for (band, album) in highestSellingBandAlbum {
+    print("\(band)'s top-selling album was \(album)")
+}
 
 
 
@@ -78,7 +92,7 @@ let bandName = "Nirvana"
 /*: question6
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
-
+// (String, String)
 
 
 
