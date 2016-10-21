@@ -18,7 +18,7 @@
  */
 // write your code here
 
-
+var bestAlbum = ["Nirvana": "Nevermind", "Blondie": "Parallel Lines", "The Kinks": "Low Budget", "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"]
 
 
 
@@ -30,6 +30,8 @@
  */
 // write your code here
 
+bestAlbum["Pixie"] = "Doolittle"
+bestAlbum
 
 
 
@@ -42,7 +44,8 @@
  */
 // write your code here
 
-
+bestAlbum["The Kinks"] = nil
+bestAlbum
 
 
 
@@ -56,7 +59,11 @@
 let bandName = "Nirvana"
 // write your code here
 
+var band = bestAlbum[bandName]
 
+if let band = band {
+    print("\(bandName)'s top-selling album was \(band)")
+}
 
 
 
@@ -69,7 +76,9 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+for (bands, album) in bestAlbum {
+    print("\(bands)'s top-selling album was \(album)")
+}
 
 
 
@@ -80,7 +89,7 @@ let bandName = "Nirvana"
  */
 
 
-
+// The key and the value
 
 
 
@@ -90,8 +99,7 @@ let bandName = "Nirvana"
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
 
-
-
+var result = ["A": [90,91,93,94,95,96,97,98,99,100], "B": [80,81,82,83,84,85,86,87,89], "C": [70,71,72,73,74,75,76,77,79], "D": [60,61,62,63,64,65,66,67,69], "F": [50,51,52,53,54,55,56,57,59]]
 
 
 
@@ -107,7 +115,7 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+let grade = [9: "B", 10: "A", 11: "C", 12: "B"]
 
 
 
@@ -119,7 +127,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (grade, score) in grade {
+    print("Grade \(grade) got \(score)")
+}
 
 
 
@@ -131,8 +141,11 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
-
+for (grade, score) in grade{
+    if "\(score)" == "A" {
+        print("Grade \(grade) got the highest score with \(score)!")
+    }
+}
 
 
 
