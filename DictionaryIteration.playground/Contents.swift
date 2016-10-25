@@ -16,53 +16,30 @@
  * The Kinks: _Low Budget_
  * The Beatles: _Sgt. Pepper's Lonely Hearts Club Band_
  */
-// write your code here
-
-
-
-
-
-
-
-
+var bandsProvided: [String: String] = [
+    "Nirvana": "Nevermind",
+    "Blondie": "Parallel Lines",
+    "The Kinks": "Low Budget",
+    "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"
+]
 /*: question2
  ### 2. Oops, we forgot an album! Add the Pixie's _Doolittle_ to the dictionary you created in Question 1.
  */
-// write your code here
-
-
-
-
-
-
-
-
+bandsProvided["Pixie"] = "Doolittle"
+print(bandsProvided)
 /*: question3
  ### 3. We don't care that much about The Kinks. Delete them from the dictionary you created in Question 1.
  */
-// write your code here
-
-
-
-
-
-
-
-
-
+bandsProvided["The Kinks"] = nil
+print(bandsProvided)
 /*: question4
  ### 4. A band name has been defined in the constant `bandName` below. Using this constant and the dictionary you created in Question 1, print "<Band>'s top-selling album was <Album>" to the console.
  */
 let bandName = "Nirvana"
-// write your code here
 
-
-
-
-
-
-
-
+if let bandName = bandsProvided["Nirvana"] {
+    print("\(bandName)'s top-selling album was \(bandsProvided["Nirvana"])")
+}
 /*: question5
  ### 5. Iterate over the dictionary you created in Question 1 and print "<Band>'s top-selling album was <Album>" for each item in the dictionary.
  */
