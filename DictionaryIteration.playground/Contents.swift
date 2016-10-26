@@ -90,12 +90,33 @@ gradeBook(arg: avgExamScore)
 /*: question10
  ### 10. Find which grade got the highest score! Iterate through the dictionary to find the highest score, then print the message "Grade <Grade> got the highest score with <Score>!" to the console.
  */
-func highestScore(arg: Dictionary<Int, String>) {
-    for (grade,score) in arg {
-        if score == "A" {
-            print("Grade \(grade) got the highest score with \(score)!")
+//func highestScore(arg: Dictionary<Int, String>) {
+//    for (grade,score) in arg {
+//        if score == "A" {
+//            print("Grade \(grade) got the highest score with \(score)!")
+//        }
+//    }
+//}
+//highestScore(arg: avgExamScore)
+// score == a is too easy and not as great as it could be. Refactor this.
+
+let examResults: [Int: String] = [
+    9: "B",
+    10: "A",
+    11: "C",
+    12: "B",
+]
+
+var highestGrade = 0
+for (grade, score) in examResults {
+    if let highestScore = examResults[highestGrade] {
+        if score < highestScore {
+            highestGrade = grade
         }
+    } else {
+        highestGrade = grade
     }
 }
-highestScore(arg: avgExamScore)
-// score == a is too easy and not as great as it could be. Refactor this.
+if let winningScore = examResults[highestGrade] {
+    print("Grade \(highestGrade) got the highest score with \(winningScore)!")
+}
