@@ -43,37 +43,23 @@ if let bandName = bandsProvided["Nirvana"] {
 /*: question5
  ### 5. Iterate over the dictionary you created in Question 1 and print "<Band>'s top-selling album was <Album>" for each item in the dictionary.
  */
-// write your code here
-
-
-
-
-
-
-
-
+for (band, album) in bandsProvided {
+    print("\(band)'s top-selling album was \(album)")
+}
 /*: question6
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
-
-
-
-
-
-
-
-
+// Array. Was optional though.
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
-
-
-
-
-
-
-
-
+var examAveragePerGrade: [Int: String] = [
+    9: "A",
+    10: "B",
+    11: "C",
+    12: "D"
+]
+// can also do string string, int int, etc.
 /*: question8
  ### 8. Create a _constant_ dictionary to store the exam results described in Question 8. This dictionary should be of type `[Int: String]`. Here are the results you can use:
 
@@ -82,35 +68,34 @@ if let bandName = bandsProvided["Nirvana"] {
  * Grade 11: C
  * Grade 12: B
  */
-// write your code here
-
-
-
-
-
-
-
-
+let avgExamScore: [Int: String] = [
+    9: "B",
+    10: "A",
+    11: "C",
+    12: "B"
+]
 /*: question9
  ### 9. Print the message "Grade <Grade> got <Score>" for each grade in the dictionary you created in Question 8.
  */
-// write your code here
+for (grade, score) in avgExamScore {
+    print("Grade \(grade) got \(score)")
+}
 
-
-
-
-
-
-
-
+func gradeBook(arg: Dictionary<Int, String>) {
+    for (grade, score) in arg {
+        print("Grade \(grade) got \(score)")
+    }
+}
+gradeBook(arg: avgExamScore)
 /*: question10
  ### 10. Find which grade got the highest score! Iterate through the dictionary to find the highest score, then print the message "Grade <Grade> got the highest score with <Score>!" to the console.
  */
-// write your code here
-
-
-
-
-
-
-
+func highestScore(arg: Dictionary<Int, String>) {
+    for (grade,score) in arg {
+        if score == "A" {
+            print("Grade \(grade) got the highest score with \(score)!")
+        }
+    }
+}
+highestScore(arg: avgExamScore)
+// score == a is too easy and not as great as it could be. Refactor this.
