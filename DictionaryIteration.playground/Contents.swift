@@ -17,23 +17,13 @@
  * The Beatles: _Sgt. Pepper's Lonely Hearts Club Band_
  */
 // write your code here
-
-
-
-
-
-
-
+var bandAlbum = ["Nirvana":"Nevermind", "Blondie":"Parallel Lines","The Kinks":"Low Budget","The Beatles":"Sgt. Pepper's Lonely Hearts Club Band"]
 
 /*: question2
  ### 2. Oops, we forgot an album! Add the Pixie's _Doolittle_ to the dictionary you created in Question 1.
  */
 // write your code here
-
-
-
-
-
+bandAlbum["Pixie"] = "Doolittle "
 
 
 
@@ -42,12 +32,7 @@
  */
 // write your code here
 
-
-
-
-
-
-
+bandAlbum["The Kinks"] = nil
 
 
 /*: question4
@@ -55,45 +40,29 @@
  */
 let bandName = "Nirvana"
 // write your code here
-
-
-
-
-
-
+print("\(bandName)'s top-selling album was \(bandAlbum[bandName]!)")
 
 
 /*: question5
  ### 5. Iterate over the dictionary you created in Question 1 and print "<Band>'s top-selling album was <Album>" for each item in the dictionary.
  */
 // write your code here
-
-
-
-
-
-
+for (band,album) in bandAlbum {
+    print("\(band)'s top-selling album was \(album)")
+}
 
 
 /*: question6
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
-
-
-
-
-
+//Ans: tuple(String,String) is returned when we iterate over dictionary.
 
 
 
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
-
-
-
-
-
+//Ans: We can use a dictionary to represnt the mapping.
 
 
 
@@ -106,11 +75,7 @@ let bandName = "Nirvana"
  * Grade 12: B
  */
 // write your code here
-
-
-
-
-
+let examResult = [9:"B",10:"A", 11:"C",12:"B"]
 
 
 
@@ -118,20 +83,23 @@ let bandName = "Nirvana"
  ### 9. Print the message "Grade <Grade> got <Score>" for each grade in the dictionary you created in Question 8.
  */
 // write your code here
-
-
-
-
-
-
+for (grade,res) in examResult {
+    print("Grade \(grade) got \(res)")
+}
 
 
 /*: question10
  ### 10. Find which grade got the highest score! Iterate through the dictionary to find the highest score, then print the message "Grade <Grade> got the highest score with <Score>!" to the console.
  */
 // write your code here
-
-
+var highest = "Z" , grade = 0
+for (_grade,_res) in examResult{
+    if highest > _res {          //"Z" has higher value than "A"
+        highest = _res
+        grade = _grade
+    }
+}
+print("Grade \(grade) got the highest score with \(highest)!")
 
 
 
