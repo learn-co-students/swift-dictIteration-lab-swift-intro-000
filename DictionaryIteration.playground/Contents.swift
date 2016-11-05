@@ -19,7 +19,12 @@
 // write your code here
 
 
-
+var bandDict = [
+    "Nirvana": "Nevermind",
+    "Blondie": "Paralell Lines",
+    "The Kinks": "Low Budget",
+    "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"
+]
 
 
 
@@ -30,6 +35,7 @@
  */
 // write your code here
 
+bandDict["The Pixie's"] = "Doolittle"
 
 
 
@@ -41,7 +47,7 @@
  ### 3. We don't care that much about The Kinks. Delete them from the dictionary you created in Question 1.
  */
 // write your code here
-
+bandDict["The Kinks"] = nil
 
 
 
@@ -57,7 +63,7 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+print("\(bandName)'s top-selling album was \(bandDict[bandName]!)")
 
 
 
@@ -67,6 +73,10 @@ let bandName = "Nirvana"
  ### 5. Iterate over the dictionary you created in Question 1 and print "<Band>'s top-selling album was <Album>" for each item in the dictionary.
  */
 // write your code here
+
+for (band, album) in bandDict {
+    print("\(band)'s top-selling album was \(album)")
+}
 
 
 
@@ -89,6 +99,13 @@ let bandName = "Nirvana"
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
+var grades = [
+    "A": 95,
+    "B": 85,
+    "C": 75,
+    "D": 65,
+    "F": 55
+]
 
 
 
@@ -107,7 +124,12 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+let exams = [
+    9: "B",
+    10: "A",
+    11: "C",
+    12: "B"
+]
 
 
 
@@ -119,7 +141,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (grade, score) in exams {
+    print("Grade \(grade) got \(score)")
+}
 
 
 
@@ -129,8 +153,12 @@ let bandName = "Nirvana"
 /*: question10
  ### 10. Find which grade got the highest score! Iterate through the dictionary to find the highest score, then print the message "Grade <Grade> got the highest score with <Score>!" to the console.
  */
-// write your code here
+var highestScore = exams.
 
+// write your code here
+for (grade, score) in exams {
+    grade.max
+}
 
 
 
