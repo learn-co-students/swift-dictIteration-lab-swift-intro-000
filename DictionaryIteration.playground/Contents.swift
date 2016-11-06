@@ -18,7 +18,10 @@
  */
 // write your code here
 
-
+var bandAndAlbums = ["Nirvana": "Nevermind",
+                     "Blondie": "Parallel Lines",
+                     "The Kinks": "Low Budget",
+                     "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"]
 
 
 
@@ -31,7 +34,7 @@
 // write your code here
 
 
-
+bandAndAlbums["Pixie"] = "Doolittle"
 
 
 
@@ -42,7 +45,7 @@
  */
 // write your code here
 
-
+bandAndAlbums["The Kinks"] = nil
 
 
 
@@ -56,9 +59,11 @@
 let bandName = "Nirvana"
 // write your code here
 
+let topAlbum = bandAndAlbums[bandName]
 
-
-
+if let topAlbum = topAlbum {
+    print("\(bandName)'s top-selling album was \(topAlbum)")
+}
 
 
 
@@ -68,7 +73,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (band, topAlbum) in bandAndAlbums {
+    print ("\(band)'s top-selling album was \(topAlbum)")
+}
 
 
 
@@ -78,7 +85,7 @@ let bandName = "Nirvana"
 /*: question6
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
-
+// tuple
 
 
 
@@ -89,7 +96,7 @@ let bandName = "Nirvana"
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
-
+// dictionary of int and String
 
 
 
@@ -107,6 +114,7 @@ let bandName = "Nirvana"
  */
 // write your code here
 
+var grades: [Int: String] = [9:"B", 10:"A", 11:"C", 12:"B"]
 
 
 
@@ -120,6 +128,9 @@ let bandName = "Nirvana"
 // write your code here
 
 
+for (grade, score) in grades {
+    print("Grade \(grade) got \(score)")
+}
 
 
 
@@ -130,9 +141,23 @@ let bandName = "Nirvana"
  ### 10. Find which grade got the highest score! Iterate through the dictionary to find the highest score, then print the message "Grade <Grade> got the highest score with <Score>!" to the console.
  */
 // write your code here
+var highestGrade = 0
+print(grades[highestGrade])
 
+for (grade, score) in grades {
+    if let highestScore = grades[highestGrade] {
+        if score < highestScore {
+         highestGrade = grade
+        }
+    }else {
+        highestGrade = grade
+    }
+   
+}
 
-
+if let highestScore = grades[highestGrade] {
+     print("Grade \(highestGrade) got the highest score with \(highestScore)!")
+}
 
 
 
