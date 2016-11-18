@@ -18,6 +18,10 @@
  */
 // write your code here
 
+var band_albums = ["Nirvana":"Nevermind"]
+band_albums["Blondie"] = "Parallel Lines"
+band_albums["The Kinks"] = "Low Budget"
+band_albums["The Beatles"] = "Sgt. Pepper's Lonely Hearts Club Band"
 
 
 
@@ -30,7 +34,7 @@
  */
 // write your code here
 
-
+band_albums["Pixie"] = "Doolittle"
 
 
 
@@ -43,9 +47,9 @@
 // write your code here
 
 
+band_albums.removeValue(forKey: "The Kinks")
 
-
-
+print(Array(band_albums.keys))
 
 
 
@@ -57,7 +61,10 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+if let(album_Nirvana) = band_albums["Nirvana"]{
+    let album_Nirvana = album_Nirvana
+    print("\(bandName)'s top-selling album was \(album_Nirvana)")
+}
 
 
 
@@ -68,7 +75,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (key, value) in band_albums {
+    print("\(value)'s top-selling album was \(key)")
+}
 
 
 
@@ -80,7 +89,7 @@ let bandName = "Nirvana"
  */
 
 
-
+//String, string
 
 
 
@@ -89,7 +98,7 @@ let bandName = "Nirvana"
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
-
+// Dictionary
 
 
 
@@ -107,7 +116,7 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+let grades = ["Grade 9":"B", "Grade 10":"A", "Grade 11":"C",  "Grade 12":"B"]
 
 
 
@@ -119,7 +128,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (key, value) in grades{
+    print("Grade \(key) got \(value)")
+}
 
 
 
@@ -131,8 +142,16 @@ let bandName = "Nirvana"
  */
 // write your code here
 
+var max_key : String = ""
+var max_value : String = "Z"
 
-
+for (key, value) in grades{
+    if max_value > value {
+        max_key = key
+        max_value = value
+    }
+}
+print("Grade \(max_key) got the highest score with \(max_value)")
 
 
 
