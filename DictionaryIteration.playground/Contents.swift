@@ -18,7 +18,14 @@
  */
 // write your code here
 
+var bandAlbums = [String : String]()
 
+bandAlbums = [
+    "Nirvana" : "Nevermind",
+    "Blondie" : "Parallel Lines",
+    "The Kinks" : "Low Budget",
+    "The Beatles" : "Sgt. Pepper's Lonely Hearts Club Band"
+]
 
 
 
@@ -30,7 +37,7 @@
  */
 // write your code here
 
-
+bandAlbums["Pixies"] = "Doolittle"
 
 
 
@@ -44,7 +51,7 @@
 
 
 
-
+bandAlbums["The Kinks"] = nil
 
 
 
@@ -58,7 +65,7 @@ let bandName = "Nirvana"
 
 
 
-
+print ("\(bandName)'s top-selling album was \(bandAlbums[bandName]!)")
 
 
 
@@ -68,7 +75,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (currentBand, albumName) in bandAlbums {
+    print("\(currentBand)'s top-selling album was \(albumName)")
+}
 
 
 
@@ -89,7 +98,7 @@ let bandName = "Nirvana"
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
-
+var gradeAverages = [Int : String]()
 
 
 
@@ -108,7 +117,7 @@ let bandName = "Nirvana"
 // write your code here
 
 
-
+gradeAverages = [9 : "B", 10 : "A", 11 : "C", 12 : "B"]
 
 
 
@@ -119,7 +128,10 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (grade, average) in gradeAverages
+{
+    print("Grade \(grade) got an average score of \(average)")
+}
 
 
 
@@ -131,9 +143,18 @@ let bandName = "Nirvana"
  */
 // write your code here
 
+    var highestScore: Int = 0
+    var maxValues: String = "Z"
 
-
-
+    for (grade, average) in gradeAverages
+    {
+        if maxValues > average {
+            highestScore = grade
+            maxValues  = average
+        }
+    
+    }
+    print("Grade \(highestScore) got the highest score with \(maxValues)")
 
 
 
