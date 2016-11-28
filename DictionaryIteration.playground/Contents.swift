@@ -21,7 +21,7 @@
 
 
 
-
+var dic = ["Nirvana": "Nevermind","Blondie": "Parallel Lines" ,"The Kinks": "Low Budget" ,"The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"]
 
 
 
@@ -33,7 +33,7 @@
 
 
 
-
+dic["Doolittle"] = "Pixie"
 
 
 
@@ -43,7 +43,7 @@
 // write your code here
 
 
-
+dic["The Kinks"] = nil
 
 
 
@@ -55,7 +55,10 @@
  */
 let bandName = "Nirvana"
 // write your code here
-
+print( "\("Nirvana")'s top-selling album was \(dic["Nirvana"])" )
+for (key , value) in dic {
+    
+}
 
 
 
@@ -68,6 +71,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
+for (key , value) in dic {
+    print( "\(key)'s top-selling album was \(value)" )
+}
 
 
 
@@ -82,7 +88,7 @@ let bandName = "Nirvana"
 
 
 
-
+//string optional
 
 
 
