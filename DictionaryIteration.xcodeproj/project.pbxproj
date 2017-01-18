@@ -157,7 +157,7 @@
 				TargetAttributes = {
 					7D9D21621E12F3DC00655C22 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3E2QGNXM7N;
+						DevelopmentTeam = 56S3PA4JK8;
 						ProvisioningStyle = Automatic;
 					};
 					7D9D21761E12F3DC00655C22 = {
@@ -351,12 +351,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3E2QGNXM7N;
+				DEVELOPMENT_TEAM = 56S3PA4JK8;
 				INFOPLIST_FILE = DictionaryIteration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JimCampagno.Swift.DictionaryIteration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -364,12 +366,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3E2QGNXM7N;
+				DEVELOPMENT_TEAM = 56S3PA4JK8;
 				INFOPLIST_FILE = DictionaryIteration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JimCampagno.Swift.DictionaryIteration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
