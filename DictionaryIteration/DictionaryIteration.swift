@@ -10,53 +10,69 @@ import Foundation
 
 class DictionaryIteration {
     
-    // Replace this comment with your answer to Question #1.
+    var bands = ["Nirvana": "Nevermind", "Blondie": "Parallel Lines", "The Kinks": "Low Budget", "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"]
+    
 
     
     
     
-    // Question #2
-    
-    
-    
-    
-    
-    // Question #3
-   
-    
-    
-    
-    // Question #4
-    func nirvanaBestSeller() -> String {
-        let bandName = "Nirvana"
-      
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
-        return ""
+    func addPixie() {
+        bands["Pixie"] = "Doolittle"
     }
     
     
-    // Question #5
+    
+    
+    func removeKinks(){
+        bands["The Kinks"] = nil
+    }
    
     
     
     
+    func nirvanaBestSeller() -> String {
+        var sentence = ""
+        let bandName = "Nirvana"
+        if let albumUnwrapped = bands[bandName] {
+            sentence = ("\(bandName)'s top-selling album was \(albumUnwrapped).")
+        }
+        return sentence
+    }
     
-    // Question #6
+
+    func bestSellers() -> String {
+        var sentence: String = ""
+        for (name,album) in bands {
+            sentence.append("\(name)'s top-selling album was \(album).")
+        }
+        return (sentence)
+    }
+
+    
+    
+    func typeOfDataStructure() -> String {
+        return "Tuple"
+    }
    
-    
-    
-    
-    
-    // Question #7
-   
-    
-    
-    
-    
-    // Question #8
- 
     
     
     
 
+    func typeOfDataStructureForSchool() -> String {
+        return "B"
+    }
+   
+    
+    
+    
+    
+    func highestGrade(grades: [Int:String]) -> Int {
+        var higherLearning: Int = 0
+        for (gradeLevel,averageGrade) in grades {
+            if averageGrade == "A" {
+                higherLearning = gradeLevel
+            }
+        }
+        return higherLearning
+    }
 }
