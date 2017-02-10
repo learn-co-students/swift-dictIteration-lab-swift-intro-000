@@ -76,5 +76,19 @@ class DictionaryIteration {
     
     // Question #8
 
+    
+    
+    func highestGrade(_ grades: [Int:String]) -> Int {
+        var topScore = 0
+        var topGradeLetter = "L"
+        
+        for (gradeNumber, gradeLetter) in grades {
+            if gradeLetter < topGradeLetter {
+                topScore = gradeNumber
+                topGradeLetter = gradeLetter
+        }
+        }
+        return topScore
+    }
   
 }
