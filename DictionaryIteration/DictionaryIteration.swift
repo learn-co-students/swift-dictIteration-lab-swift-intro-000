@@ -10,53 +10,91 @@ import Foundation
 
 class DictionaryIteration {
     
-    // Replace this comment with your answer to Question #1.
+    var bands = [
+    "Nirvana": "Nevermind",
+    "Blondie": "Parallel Lines",
+    "The Kinks": "Low Budget",
+    "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"
+    ]
 
     
     
     
-    // Question #2
-    
-    
-    
-    
-    
-    // Question #3
-   
-    
-    
-    
-    // Question #4
-    func nirvanaBestSeller() -> String {
-        let bandName = "Nirvana"
-      
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
-        return ""
+    func addPixie() {
+        bands["Pixie"] = "Doolittle"
     }
     
     
-    // Question #5
+    
+    
+    
+    func removeKinks() {
+        bands["The Kinks"] = nil
+    }
+   
+    
+    
+    
+  
+    func nirvanaBestSeller() -> String {
+        let bandName = "Nirvana"
+      
+        return "\(bandName)'s top-selling album was \(bands[bandName]!)."
+    }
+    
+    
+    func bestSellers() -> String {
+        var sentence: String = String()
+        
+        for (bandName, albumSeller) in bands {
+            sentence.append("\(bandName)'s top-selling album was \(albumSeller).");
+        }
+        return sentence
+        
+    }
+
    
     
     
     
     
-    // Question #6
+    func typeOfDataStructure() -> String {
+        return "Tuple"
+    }
+        
    
     
     
     
     
-    // Question #7
+    func typeOfDataStructureForSchool() -> String {
+        return "B"
+    }
    
     
     
     
     
-    // Question #8
- 
-    
+    func highestGrade(_ grades: [Int: String]) -> Int {
+     
+        var ret: (Int, String)?
+        
+        for (grade, score) in grades {
+            if let cur = ret {
+                if (cur.1 > score) {
+                    ret = (grade, score)
+                }
+            }
+            else {
+                ret = (grade, score)
+            }
+        }
+        
+        return (ret?.0)!
+    }
     
     
 
 }
+
+
