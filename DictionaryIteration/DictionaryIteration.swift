@@ -35,24 +35,30 @@ class DictionaryIteration {
     
     // Question #4
     func nirvanaBestSeller() -> String {
+        
         let bandName = "Nirvana"
-        let album = bands["Nirvana"]
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
+        var album = ""
+        
+        if var album = bands[bandName] {
+            return "\(bandName)'s top-selling album was \(album)."
+        }
         return "\(bandName)'s top-selling album was \(album)."
     }
-    
+
+
     
     // Question #5
-    func bestSellers() -> String {
-        var sentence : String = ""
-        for (keys,values) in bands {
-            sentence = "\(keys)'s top-selling album was \(values)"
-        }
+    func bestSellers() -> [String] {
         
+        var sentence : [String] = []
+        
+        for (keys,value) in bands {
+            sentence.append("\(keys)'s top-selling album was \(value).")
+           // return sentence
+        }
         return sentence
     }
-    
-    
+
     
     
     // Question #6
@@ -69,30 +75,28 @@ class DictionaryIteration {
     }
     
     
-    
+    let grades = [
+        7 : "D",
+        8 : "C",
+        9 : "A",
+        10 : "F"
+    ]
+
     
     // Question #8
-    func highestGrade() {
-        let grades = [
-            7 : "D",
-            8 : "C",
-            9 : "A",
-            10 : "F"
-        ]
-        var high : String = "Z"
-        var key : Int = 7
-        
-        for (grade, letter) in grades {
-            if letter < high {
-                high = letter
-                key = grade
+    func highestGrade(_ grades:[Int:String]) {
+        var highestGrade = 0
+        for (grade, score) in grades {
+            if let highestScore = grades[highestGrade] {
+                if score < highestScore {
+                    highestGrade = grade
+                }
+            } else {
+                highestGrade = grade
             }
         }
-        print(key)
-        
-        
-    }
-    
-    
-
+        if let winningScore = grades[highestGrade] {
+            print("Grade \(highestGrade) got the highest score with \(winningScore)!")
+        }
+}
 }
