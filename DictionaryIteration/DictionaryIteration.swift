@@ -10,47 +10,89 @@ import Foundation
 
 class DictionaryIteration {
     
-    // Replace this comment with your answer to Question #1.
-
+    var bands = ["Nirvana":"Nevermind",
+                 "Blondie":"Parallel Lines",
+                 "The Kinks":"Low Budget",
+                 "The Beatles":"Sgt. Pepper's Lonely Hearts Club Band"]
     
-    
-    
-    // Question #2
-    
-    
-    
-    
-    
-    // Question #3
-   
-    
-    
-    
-    // Question #4
-    func nirvanaBestSeller() -> String {
-        let bandName = "Nirvana"
-      
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
-        return ""
+    func addPixie() {
+        bands["Pixie"] = "Doolittle"
     }
     
+    func removeKinks() {
+        bands["The Kinks"] = nil
+    }
     
-    // Question #5
+    func nirvanaBestSeller() -> String {
+        let bandName = "Nirvana"
+        let bestAlbum = bands[bandName]
+        var finished = String()
+        if let bestAlbum = bestAlbum {
+            finished = bestAlbum
+        }
+        return "\(bandName)'s top-selling album was \(finished)."
+    }
+    
+    func bestSellers() -> String {
+        var sentence = ""
+        for (bandName, album) in bands {
+            sentence.append("\(bandName)'s top-selling album was \(album).")
+        }
+        return sentence
+    }
+    
+    func typeOfDataStructure() -> String {
+        return "Tuple"
+    }
+    
+    func typeOfDataStructureForSchool() -> String {
+        return "B"
+    }
    
-    
-    
-    
-    
-    // Question #6
-   
-    
-    
-    
-    
-    // Question #7
-   
-    
-    
+    func highestGrade(_ grades: [Int : String]) -> Int {
+        var bestGrade = 0
+        var gradeA: Int?
+        var gradeB: Int?
+        var gradeC: Int?
+        var gradeD: Int?
+        var gradeF: Int?
+        for (grade, letterGrade) in grades {
+            switch letterGrade {
+            case "A":
+                gradeA = grade
+            case "B":
+                gradeB = grade
+            case "C":
+                gradeC = grade
+            case "D":
+                gradeD = grade
+            case "F":
+                gradeF = grade
+            default:
+                gradeA = nil
+            }
+        }
+        if let gradeA = gradeA {
+            bestGrade = gradeA
+        } else {
+            if let gradeB = gradeB {
+                bestGrade = gradeB
+            } else {
+                if let gradeC = gradeC {
+                    bestGrade = gradeC
+                } else {
+                    if let gradeD = gradeD {
+                        bestGrade = gradeD
+                    } else {
+                        if let gradeF = gradeF {
+                            bestGrade = gradeF
+                        }
+                    }
+                }
+            }
+        }
+        return bestGrade
+    }
     
     
     // Question #8
