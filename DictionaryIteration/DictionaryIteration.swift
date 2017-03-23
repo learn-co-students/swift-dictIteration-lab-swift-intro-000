@@ -10,18 +10,22 @@ import Foundation
 
 class DictionaryIteration {
     
-    // Replace this comment with your answer to Question #1.
+    var bands = ["Nirvana":"Nevermind","Blondie":"Parallel Lines","The Kinks":"Low Budget","The Beatles":"Sgt. Pepper's Lonely Hearts Club Band"]
 
     
     
     
-    // Question #2
+    func addPixie() {
+        bands["Pixie"] = "Doolittle"
+    }
     
     
     
     
     
-    // Question #3
+    func removeKinks() {
+        bands["The Kinks"] = nil
+    }
    
     
     
@@ -29,31 +33,55 @@ class DictionaryIteration {
     // Question #4
     func nirvanaBestSeller() -> String {
         let bandName = "Nirvana"
-      
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
-        return ""
+        
+        
+        let b = bands[bandName]!
+        return "\(bandName)'s top-selling album was \(b)."
+        
     }
     
     
-    // Question #5
+    func bestSellers() -> String {
+        var sentence = ""
+        for (bandName, album) in bands {
+            sentence += "\n\(bandName)'s top-selling album was \(album)."
+        }
+        return sentence
+    }
    
     
     
     
     
-    // Question #6
+    func typeOfDataStructure() -> String {
+        return "Tuple"
+    }
    
     
     
     
     
-    // Question #7
+    func typeOfDataStructureForSchool() -> String {
+        return "B"
+    }
    
+    func highestGrade(grades: [Int:String]) -> Int {
+        let rankGrade: [String:Int]
+        rankGrade = ["F":0,"D":1,"C":2,"B":3,"A":4]
+        var max = 0
+        var hgrade = 0
+        for (i,grade) in grades {
+            if rankGrade[grade]! > max {
+                max = rankGrade[grade]!
+                hgrade = i
+            }
+        }
+        return hgrade
+    }
     
     
     
     
-    // Question #8
  
     
     
