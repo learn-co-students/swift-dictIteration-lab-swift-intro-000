@@ -10,50 +10,83 @@ import Foundation
 
 class DictionaryIteration {
     
-    // Replace this comment with your answer to Question #1.
+    var bands : [String : String] = [
+        "Nirvana" : "Nevermind",
+        "Blondie" : "Parallel Lines",
+        "The Kinks" : "Low Budget",
+        "The Beatles" : "Sgt. Pepper's Lonely Hearts Club Band"
+    ]
 
     
     
     
-    // Question #2
-    
-    
-    
-    
-    
-    // Question #3
-   
-    
-    
-    
-    // Question #4
-    func nirvanaBestSeller() -> String {
-        let bandName = "Nirvana"
-      
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
-        return ""
+    func addPixie() {
+        bands["Pixie"] = "Doolittle"
     }
     
     
-    // Question #5
+    
+    
+    
+    func removeKinks() {
+        bands.removeValue(forKey: "The Kinks")
+    }
+   
+    
+    
+    
+    func nirvanaBestSeller() -> String {
+        let bandName = "Nirvana"
+        
+        if let album = bands[bandName]{
+            return "\(bandName)'s top-selling album was \(album)."
+        }
+        else {
+            return "Could not be unwrapped"
+        }
+    }
+    
+    
+    func bestSellers() -> String {
+        var sentence : String = ""
+        
+        for (band, album) in bands {
+            sentence.append("\(band)'s top-selling album was \(album).\n")
+        }
+        
+        return sentence
+    }
    
     
     
     
     
-    // Question #6
+    func typeOfDataStructure() -> String {
+        return "Tuple"
+    }
    
     
     
     
     
-    // Question #7
+    func typeOfDataStructureForSchool() -> String {
+        return "B"
+    }
    
     
     
     
     
-    // Question #8
+    func highestGrade(_ grades : [Int : String]) -> Int {
+        var highestGrade : (Int, String) = (0, "Z")
+        
+        for (key, value) in grades {
+            if value < highestGrade.1 {
+                highestGrade = (key, value)
+            }
+        }
+        return highestGrade.0
+    }
  
     
     
