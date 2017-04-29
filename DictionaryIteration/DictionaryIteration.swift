@@ -10,53 +10,63 @@ import Foundation
 
 class DictionaryIteration {
     
-    // Replace this comment with your answer to Question #1.
+    var bands = [
+        "Nirvana" : "Nevermind",
+        "Blondie" : "Parallel Lines",
+        "The Kinks" : "Low Budget",
+        "The Beatles" : "Sgt. Pepper's Lonely Hearts Club Band"
+    ]
 
+    func addPixie() {
+        bands["Pixie"] = "Doolittle"
+    }
     
-    
-    
-    // Question #2
-    
-    
-    
-    
-    
-    // Question #3
+    func removeKinks() {
+        bands.removeValue(forKey: "The Kinks")
+    }
    
-    
-    
-    
-    // Question #4
     func nirvanaBestSeller() -> String {
         let bandName = "Nirvana"
-      
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
-        return ""
+        var bestSellerAlbum = ""
+        
+        if let albumName = bands[bandName] {
+            bestSellerAlbum = "\(bandName)'s top-selling album was \(albumName)."
+        }
+        
+        return bestSellerAlbum
     }
     
     
-    // Question #5
+    func bestSellers() -> String {
+        var sentence = ""
+        
+        for (band, album) in bands {
+            sentence.append("\(band)'s top-selling album was \(album).")
+        }
+        
+        return sentence
+    }
    
-    
-    
-    
-    
-    // Question #6
+    func typeOfDataStructure() -> String {
+        return "Tuple"
+    }
    
-    
-    
-    
-    
-    // Question #7
+    func typeOfDataStructureForSchool() -> String {
+        return "B"
+    }
    
-    
-    
-    
-    
-    // Question #8
+    func highestGrade(_ grades: [Int : String]) -> Int {
+        var highestGradeNumber = 0
+        var highestGradeLetter = "G"
+        
+        for (gradeNumber, gradeLetter) in grades {
+            if gradeLetter < highestGradeLetter {
+                highestGradeLetter = gradeLetter
+                highestGradeNumber = gradeNumber
+            }
+        }
+        
+        return highestGradeNumber
+    }
  
-    
-    
-    
-
 }
