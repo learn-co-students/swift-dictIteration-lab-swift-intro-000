@@ -85,21 +85,21 @@ class DictionaryIteration {
     // Question #8
  
     func highestGrade(_: [Int: String]) {
-//        let grades = [
-//            7 : "D",
-//            8 : "C",
-//            9 : "A",
-//            10 : "F"
-//        ]
-//        
-//        for (grade, letter) in grades {
-//            
-//            if letter == "A" {
-//                print(9)
-//            }
-//        }
+        let grades = [
+            7 : "D",
+            8 : "C",
+            9 : "A",
+            10 : "F"
+        ]
+        
+        for (grade, letter) in grades {
+            
+            if letter == "A" {
+                print(grade)
+            }
+        }
+        
     }
-    
     
 
 }
