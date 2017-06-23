@@ -22,7 +22,7 @@ class DictionaryIterationTests: XCTestCase {
     }
     
     func testInitialDictionary() {
-        let bands = [
+       let bands = [
             "Nirvana" : "Nevermind",
             "Blondie" : "Parallel Lines",
             "The Kinks" : "Low Budget",
@@ -77,7 +77,7 @@ class DictionaryIterationTests: XCTestCase {
         ]
         let expectedResult = 9
         
-        XCTAssertEqual(testClass.highestGrade(grades), expectedResult, "The grade with the best results is grade 9. In comparing Strings in Swift, A < D evaluates to true.")
+        XCTAssertEqual(testClass.highestGrade(_grades: grades), expectedResult, "The grade with the best results is grade 9. In comparing Strings in Swift, A < D evaluates to true.")
     }
     
 }
