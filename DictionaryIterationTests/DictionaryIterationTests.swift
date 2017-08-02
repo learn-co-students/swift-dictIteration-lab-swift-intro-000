@@ -50,7 +50,7 @@ class DictionaryIterationTests: XCTestCase {
         
         XCTAssertEqual(testClass.nirvanaBestSeller(), expectedResult, "Nirvana's top-selling album was Nevermind is what should be returned.")
     }
-    
+        
     func testBestSellers() {
         let sentence = testClass.bestSellers()
         
