@@ -10,53 +10,79 @@ import Foundation
 
 class DictionaryIteration {
     
-    // Replace this comment with your answer to Question #1.
+    var bands: [String: String] = [
+        "Nirvana":      "Nevermind",
+        "The Kinks":    "Low Budget",
+        "Blondie":      "Parallel Lines",
+        "The Beatles":  "Sgt. Pepper's Lonely Hearts Club Band",
+    ]
+
 
     
     
     
-    // Question #2
-    
-    
-    
-    
-    
-    // Question #3
-   
-    
-    
-    
-    // Question #4
-    func nirvanaBestSeller() -> String {
-        let bandName = "Nirvana"
-      
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
-        return ""
+    func addPixie() -> Void {
+        bands["Pixie"] = "Doolittle"
     }
     
     
-    // Question #5
+    
+    
+    
+    func removeKinks() -> Void {
+        bands["The Kinks"] = nil
+    }
+   
+    
+    
+    
+    func nirvanaBestSeller() -> String {
+        let bandName = "Nirvana"
+      
+        return "\(bandName)'s top-selling album was \(bands[bandName]!)."
+    }
+    
+    
+    func bestSellers() -> String {
+        var sentence: String = ""
+        for band: (key: String, value:String) in bands {
+            sentence.append("\(band.key)'s top-selling album was \(band.value).\n")
+        }
+        return sentence
+    }
    
     
     
     
     
-    // Question #6
+    func typeOfDataStructure() -> String {
+        return "Tuple"
+    }
    
     
     
     
     
-    // Question #7
+    func typeOfDataStructureForSchool() -> String {
+        return "B"
+    }
    
     
     
     
     
-    // Question #8
- 
-    
-    
-    
+    func highestGrade(_ dict: [Int: String]) -> Int {
+        var result: Int = 0
+        var highest: String = "G"
 
+        for grade: (key: Int, value: String) in dict {
+            if grade.value < highest {
+                highest = grade.value
+                result = grade.key
+            }
+
+        }
+
+        return result
+    }
 }
