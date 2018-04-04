@@ -75,7 +75,7 @@ class DictionaryIterationTests: XCTestCase {
             9 : "A",
             10 : "F"
         ]
-        let expectedResult = 9
+        let expectedResult = 9  
         
         XCTAssertEqual(testClass.highestGrade(grades), expectedResult, "The grade with the best results is grade 9. In comparing Strings in Swift, A < D evaluates to true.")
     }
