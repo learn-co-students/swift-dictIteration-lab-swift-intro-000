@@ -10,50 +10,66 @@ import Foundation
 
 class DictionaryIteration {
     
-    // Replace this comment with your answer to Question #1.
-
+    var bands: [String: String] = ["Nirvana": "Nevermind", "Blondie": "Parallel Lines",
+                                   "The Kinks": "Low Budget", "The Beatles": "Sgt. Pepper's Lonely Hearts Club Band"
+                                ]
+    func addPixie () {
+        bands["Pixie"] = "Doolittle"
+    }
     
-    
-    
-    // Question #2
-    
-    
-    
-    
-    
-    // Question #3
-   
-    
+    func removeKinks () {
+        bands["The Kinks"] = nil
+    }
     
     
     // Question #4
     func nirvanaBestSeller() -> String {
         let bandName = "Nirvana"
-      
-        // remove this return statement and replace it with what should be returned when you complete your implementation.
-        return ""
+        if let nirvanaBestAlbum = bands[bandName] {
+            return "\(bandName)'s top-selling album was \(nirvanaBestAlbum)."
+        } else {
+            return "Cannot find \(bandName)'s best album."
+        }
     }
     
     
-    // Question #5
+    func bestSellers ()-> String {
+        var Sentence: String = ""
+        for (band, album) in bands {
+            Sentence.append("The \(band)'s top-selling album was \(album).\n")
+        }
+        return Sentence
+    }
+    
+    
+    func typeOfDataStructure() -> String {
+        return "Tuple"
+    }
    
     
+    func typeOfDataStructureForSchool() -> String {
+        return "B"
+    }
     
-    
-    
-    // Question #6
+    let grades = [7: "D",
+                  8: "C",
+                  9: "A",
+                  10: "F"
+    ]
    
+    func highestGrade (_ grade: [Int:String]) -> Int {
+        var highestMark = "D"
+        var highestGradeClass = 7
+        for (grade, mark) in grades {
+            if mark < highestMark {
+                highestMark = mark
+                highestGradeClass = grade
+            }
+        }
+        return highestGradeClass
+    }
     
     
-    
-    
-    // Question #7
-   
-    
-    
-    
-    
-    // Question #8
  
     
     
